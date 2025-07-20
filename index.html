@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coze Chat</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+  <div class="header">
+    <h1>娜娜智能助手</h1>
+    <p>我们的AI助手24小时为您服务,解答各种问题,提供专业建议和贴心陪伴。</p>
+  </div>
+  <div class="chat-container" id="coze-chat">
+    <img src="images/打火花1.jpg" alt="湖南夜晚景色" class="chat-image">
+  </div>
+  <div class="footer">
+        <p>© 2025 智能助手 | 使用Coze平台构建</p>
+  </div>
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7496364470512484371',
+    },
+    componentProps: {
+      title: '娜娜',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_3PxfmyFrm4bA8VD5qiL4RhLwWPQVVo8XMv14hYw2wiGIWZPlTsXpQBe42QWtUdAh',
+      onRefreshToken: function () {
+        return 'pat_3PxfmyFrm4bA8VD5qiL4RhLwWPQVVo8XMv14hYw2wiGIWZPlTsXpQBe42QWtUdAh'
+      }
+    }
+  });
+</script>
+</body>
+</html>
